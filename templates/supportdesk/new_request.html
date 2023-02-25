@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}New Request{% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center py-5">
+        <div class="col-md-6 bg-light p-4 border border-primary">
+            <form method="post">
+                <h5 class="h5 mb-2">
+                    Request information
+                </h5>
+                {% csrf_token %}
+                <p class="card-text">{{form.summary|as_crispy_field}}</p>
+                <p class="card-text">{{form.description|as_crispy_field}}</p>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" name="is_high_priority">
+                    <label class="custom-control-label" for="customSwitch1">Flag as high priority</label>
+                </div>
+                <br>
+                <button class="btn btn-sm btn-primary w-100" type="submit">Create Support Request</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
