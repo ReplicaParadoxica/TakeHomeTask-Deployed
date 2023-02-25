@@ -4,7 +4,7 @@ This is an internal support desk app built using Django, which allows customers 
 The app also provides quick actions for agents to reassign a ticket and mark a ticket as completed.
 
 Existing urls:
-Authentication
+<br>Authentication
 - https://supportdesk.fly.dev/auth/login
 - https://supportdesk.fly.dev/auth/register
 
